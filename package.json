@@ -1,0 +1,14 @@
+{
+  "name": "perftest",
+  "version": "1.0.0",
+  "dependencies": {
+    "ol": "6.13.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  }
+}
