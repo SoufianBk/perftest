@@ -8,7 +8,9 @@
     "parcel": "^2.0.0"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "base-example": "parcel ol-base-example/index.html",
+    "base-example build": "parcel build ol-base-example/index.html",
+    "geojson": "parcel ol-geojson/index.html",
+    "geojson build": "parcel build ol-geojson/index.html"
   }
 }
