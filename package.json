@@ -14,7 +14,7 @@
     "geojson": "parcel ol-geojson/index.html",
     "geojson build": "parcel build ol-geojson/index.html",
 
-    "test": "parcel ol-geojson/test.html",
-    "test build": "parcel build ol-geojson/test.html"
+    "ml-geojson": "parcel maplibre/index.html",
+    "ml-geojson build": "parcel build maplibre/index.html"
   }
 }

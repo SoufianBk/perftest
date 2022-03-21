@@ -4,79 +4,52 @@ import Map from 'ol/Map';
 import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
 import View from 'ol/View';
-import {Fill, Stroke, Style} from 'ol/style';
+import {useGeographic} from 'ol/proj';
+import TileLayer from "ol/layer/Tile";
+import OSM from "ol/source/OSM";
 
-const style = new Style({
-    fill: new Fill({
-        color: '#eeeeee',
-    }),
-});
+useGeographic();
 
-const vectorLayer = new VectorLayer({
-    background: '#1a2b39',
-    source: new VectorSource({
-        url: 'https://openlayers.org/data/vector/ecoregions.json',
-        format: new GeoJSON(),
-    }),
-    style: function (feature) {
-        const color = feature.get('COLOR') || '#eeeeee';
-        style.getFill().setColor(color);
-        return style;
-    },
-});
+var timerStart = Date.now();
+var timerStop;
+var timerDelta;
 
-const map = new Map({
-    layers: [vectorLayer],
-    target: 'map',
-    view: new View({
-        center: [0, 0],
-        zoom: 1,
-    }),
-});
 
-const featureOverlay = new VectorLayer({
-    source: new VectorSource(),
-    map: map,
-    style: new Style({
-        stroke: new Stroke({
-            color: 'rgba(255, 255, 255, 0.7)',
-            width: 2,
+// MAP
+var myMap   =   new Map({
+    layers: [
+        new TileLayer({
+            source: new OSM(),
         }),
-    }),
+    ],
+    target: 'map',
+    view:   new View({
+        center: [20, 0],
+        zoom: 3
+    })
 });
 
-let highlight;
-const displayFeatureInfo = function (pixel) {
-    const feature = map.forEachFeatureAtPixel(pixel, function (feature) {
-        return feature;
-    });
-
-    const info = document.getElementById('info');
-    if (feature) {
-        info.innerHTML = feature.get('ECO_NAME') || '&nbsp;';
-    } else {
-        info.innerHTML = '&nbsp;';
-    }
-
-    if (feature !== highlight) {
-        if (highlight) {
-            featureOverlay.getSource().removeFeature(highlight);
-        }
-        if (feature) {
-            featureOverlay.getSource().addFeature(feature);
-        }
-        highlight = feature;
-    }
-};
-
-map.on('pointermove', function (evt) {
-    if (evt.dragging) {
-        return;
-    }
-    const pixel = map.getEventPixel(evt.originalEvent);
-    displayFeatureInfo(pixel);
+var SRC_bigJSON = new VectorSource({
+    url: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson',  // big JSON file
+    format: new GeoJSON()
+});
+var bigJSON  = new VectorLayer({
+    source: SRC_bigJSON
 });
 
-map.on('click', function (evt) {
-    displayFeatureInfo(evt.pixel);
+var nb=1;
+for (var i=0; i<nb; i++) {
+    console.info("add n°" + i);
+    myMap.addLayer(bigJSON);
+}
+
+bigJSON.on('change', function(e) {
+    console.info("Number of features loaded = " + bigJSON.getSource().getFeatures().length * myMap.getLayers().getLength());
+
+    timerStop = Date.now();
+    timerDelta = timerStop - timerStart;
+
+    console.info("Start at " + timerStart);
+    console.info("Stopped at " + timerStop );
+    console.info("Loading time = " + timerDelta );
 });
