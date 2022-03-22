@@ -44,16 +44,22 @@ map.on('load', function () {
 
             map.addSource('AirPorts_points', {
                 type: 'geojson',
-                data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson'
+                // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json
+                data: 'https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json'
             });
 
             map.addLayer({
                 'id': 'AirPorts',
-                'type': 'symbol',
+                'type': 'line',
                 'source': 'AirPorts_points',
-                'layout': {
-                    'icon-image': 'AirPort_icon',
-                    'icon-size': 0.05
+                // 'layout': {
+                //     'icon-image': 'AirPort_icon',
+                //     'icon-size': 0.05
+                // }
+                'layout': {},
+                'paint': {
+                    'line-color': '#000',
+                    'line-width': 3
                 }
             });
         }

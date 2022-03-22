@@ -30,6 +30,7 @@ var myMap   =   new Map({
 });
 
 var SRC_bigJSON = new VectorSource({
+    // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json
     url: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson',  // big JSON file
     format: new GeoJSON()
 });
