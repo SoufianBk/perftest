@@ -44,12 +44,15 @@ map.on('load', function () {
 
             map.addSource('AirPorts_points', {
                 type: 'geojson',
-                // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json
-                data: 'https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json'
+                // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json 200 MB line
+                // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json 20  MB line
+                // https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson 2 MB point
+                data: 'https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json'
             });
 
             map.addLayer({
                 'id': 'AirPorts',
+                // 'type': 'circle',
                 'type': 'line',
                 'source': 'AirPorts_points',
                 // 'layout': {
@@ -58,17 +61,22 @@ map.on('load', function () {
                 // }
                 'layout': {},
                 'paint': {
+                    // 'circle-radius': 8,
+                    // 'circle-opacity': 0.8,
+                    // "circle-color": "white",
+                    // 'circle-stroke-width': 1,
+                    // 'circle-stroke-color': 'black'
                     'line-color': '#000',
                     'line-width': 3
                 }
             });
         }
     );
-
-    timerStop = Date.now();
-    timerDelta = timerStop - timerStart;
-
-    console.info("Start at " + timerStart);
-    console.info("Stopped at " + timerStop );
-    console.info("Loading time = " + timerDelta );
 });
+
+timerStop = Date.now();
+timerDelta = timerStop - timerStart;
+
+console.info("Start at " + timerStart);
+console.info("Stopped at " + timerStop );
+console.info("Loading time = " + timerDelta );

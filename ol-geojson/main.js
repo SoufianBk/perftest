@@ -1,14 +1,6 @@
 import 'ol/ol.css';
-import GeoJSON from 'ol/format/GeoJSON';
-import Map from 'ol/Map';
-import VectorLayer from 'ol/layer/Vector';
-import VectorSource from 'ol/source/Vector';
-import View from 'ol/View';
-import {useGeographic} from 'ol/proj';
-import TileLayer from "ol/layer/Tile";
-import OSM from "ol/source/OSM";
 
-useGeographic();
+ol.proj.useGeographic();
 
 var timerStart = Date.now();
 var timerStop;
@@ -16,25 +8,25 @@ var timerDelta;
 
 
 // MAP
-var myMap   =   new Map({
+var myMap = new ol.Map({
     layers: [
-        new TileLayer({
-            source: new OSM(),
+        new ol.layer.Tile ({
+            source: new ol.source.OSM(),
         }),
     ],
     target: 'map',
-    view:   new View({
+    view:   new ol.View({
         center: [20, 0],
         zoom: 3
     })
 });
 
-var SRC_bigJSON = new VectorSource({
+var SRC_bigJSON = new ol.source.Vector({
     // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json
-    url: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson',  // big JSON file
-    format: new GeoJSON()
+    url: 'https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json',  // big JSON file
+    format: new ol.format.GeoJSON()
 });
-var bigJSON  = new VectorLayer({
+var bigJSON  = new ol.layer.Vector ({
     source: SRC_bigJSON
 });
 
