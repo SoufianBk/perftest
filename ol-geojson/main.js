@@ -1,5 +1,10 @@
 import 'ol/ol.css';
 
+// https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json 200 MB line
+// https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json 20  MB line
+// https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson 2 MB point
+var file = 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson';
+
 ol.proj.useGeographic();
 
 var timerStart = Date.now();
@@ -22,7 +27,7 @@ var myMap = new ol.Map({
 });
 
 var SRC_bigJSON = new ol.source.Vector({
-    url: 'https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json',  // big JSON file
+    url: file,  // big JSON file
     format: new ol.format.GeoJSON()
 });
 var bigJSON  = new ol.layer.Vector ({
