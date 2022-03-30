@@ -9,15 +9,12 @@
   },
   "scripts": {
     "leaflet": "parcel leaflet/lindex.html",
-    "leaflet build": "parcel build leaflet/lindex.html",
+    "leaflet-build": "parcel build leaflet/lindex.html",
 
-    "base-example": "parcel ol-base-example/index.html",
-    "base-example build": "parcel build ol-base-example/index.html",
+    "ol": "parcel ol-geojson/index.html",
+    "ol-build": "parcel build ol-geojson/index.html",
 
-    "geojson": "parcel ol-geojson/index.html",
-    "geojson build": "parcel build ol-geojson/index.html",
-
-    "ml-geojson": "parcel maplibre/mlindex.html",
-    "ml- geojson build": "parcel build maplibre/mlindex.html"
+    "ml": "parcel maplibre/mlindex.html",
+    "ml-build": "parcel build maplibre/mlindex.html"
   }
 }

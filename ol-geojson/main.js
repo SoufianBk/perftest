@@ -22,7 +22,6 @@ var myMap = new ol.Map({
 });
 
 var SRC_bigJSON = new ol.source.Vector({
-    // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json
     url: 'https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json',  // big JSON file
     format: new ol.format.GeoJSON()
 });
@@ -30,15 +29,10 @@ var bigJSON  = new ol.layer.Vector ({
     source: SRC_bigJSON
 });
 
-var nb=1;
-for (var i=0; i<nb; i++) {
-    console.info("add n°" + i);
-    myMap.addLayer(bigJSON);
-}
+
+myMap.addLayer(bigJSON);
 
 bigJSON.on('change', function(e) {
-    console.info("Number of features loaded = " + bigJSON.getSource().getFeatures().length * myMap.getLayers().getLength());
-
     timerStop = Date.now();
     timerDelta = timerStop - timerStart;
 
