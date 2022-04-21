@@ -2,19 +2,24 @@
   "name": "perftest",
   "version": "1.0.0",
   "dependencies": {
+    "@deck.gl/carto": "^8.7.5",
+    "@deck.gl/core": "^8.7.5",
+    "@deck.gl/layers": "^8.7.5",
+    "mapbox-gl": "^2.8.1",
     "ol": "6.14.1"
   },
   "devDependencies": {
-    "parcel": "^2.0.0"
+    "parcel": "^2.0.0",
+    "process": "^0.11.10"
   },
   "scripts": {
     "leaflet": "parcel leaflet/lindex.html",
     "leaflet-build": "parcel build leaflet/lindex.html",
-
     "ol": "parcel ol-geojson/index.html",
     "ol-build": "parcel build ol-geojson/index.html",
-
     "ml": "parcel maplibre/mlindex.html",
-    "ml-build": "parcel build maplibre/mlindex.html"
+    "ml-build": "parcel build maplibre/mlindex.html",
+    "deck": "parcel deck/dindex.html",
+    "deck-build": "parcel build deck/dindex.html"
   }
 }

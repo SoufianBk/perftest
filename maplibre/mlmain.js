@@ -1,7 +1,7 @@
 // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json 200 MB line
 // https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json 20  MB line
 // https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson 2 MB point
-var file = 'https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json';
+var file = 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson';
 
 var timerStart = Date.now();
 var timerStop;
@@ -54,8 +54,8 @@ map.on('load', function () {
 
             map.addLayer({
                 'id': 'AirPorts',
-                // 'type': 'circle',
-                'type': 'line',
+                'type': 'circle',
+                // 'type': 'line',
                 'source': 'AirPorts_points',
                 // 'layout': {
                 //     'icon-image': 'AirPort_icon',
@@ -63,13 +63,13 @@ map.on('load', function () {
                 // }
                 'layout': {},
                 'paint': {
-                    // 'circle-radius': 8,
-                    // 'circle-opacity': 0.8,
-                    // "circle-color": "white",
-                    // 'circle-stroke-width': 1,
-                    // 'circle-stroke-color': 'black'
-                    'line-color': '#000',
-                    'line-width': 3
+                    'circle-radius': 8,
+                    'circle-opacity': 0.8,
+                    "circle-color": "white",
+                    'circle-stroke-width': 1,
+                    'circle-stroke-color': 'black'
+                    // 'line-color': '#000',
+                    // 'line-width': 3
                 }
             });
         }

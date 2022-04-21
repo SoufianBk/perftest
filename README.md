@@ -13,7 +13,7 @@ For example if we want to execute the Openlayers implementation run ``npm run ol
 4. Open a browser with ```http://localhost:1234```
 5. Finally to get the result, check the console of the browser (In Firefox press on ``F12``)
 # Script names
-Here is a list of all the scripts used (can be found in ```package.json```:
+Here is a list of all the scripts used (can be found in ```package.json```):
 1. ``leaflet`` and ``leaflet-build`` for the Leaflet implementation
 1. ``ol`` and ``ol-build`` for the OpenLayers implementation
 1. ``ml`` and ``ml-build`` for the MapLibre implementation
