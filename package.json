@@ -13,13 +13,13 @@
     "process": "^0.11.10"
   },
   "scripts": {
-    "leaflet": "parcel leaflet/lindex.html",
-    "leaflet-build": "parcel build leaflet/lindex.html",
-    "ol": "parcel ol-geojson/index.html",
-    "ol-build": "parcel build ol-geojson/index.html",
-    "ml": "parcel maplibre/mlindex.html",
-    "ml-build": "parcel build maplibre/mlindex.html",
-    "deck": "parcel deck/dindex.html",
-    "deck-build": "parcel build deck/dindex.html"
+    "leaflet": "parcel leaflet/leaf.html",
+    "leaflet-build": "parcel build leaflet/leaf.html",
+    "ol": "parcel ol-geojson/ol.html",
+    "ol-build": "parcel build ol-geojson/ol.html",
+    "ml": "parcel maplibre/maplibre.html",
+    "ml-build": "parcel build maplibre/maplibre.html",
+    "deck": "parcel deck/deck.html",
+    "deck-build": "parcel build deck/deck.html"
   }
 }
