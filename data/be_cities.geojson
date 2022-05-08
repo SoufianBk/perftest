@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "cities",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "place": "city", "name": "Bruxelles - Brussel" }, "geometry": { "type": "Point", "coordinates": [ 484428.694126616173889, 6594196.236325363628566 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Oostende" }, "geometry": { "type": "Point", "coordinates": [ 324996.808092999039218, 6661342.782776682637632 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Brugge" }, "geometry": { "type": "Point", "coordinates": [ 359202.615945992933121, 6658267.504452087916434 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Gent" }, "geometry": { "type": "Point", "coordinates": [ 414666.450170782627538, 6630820.907751922495663 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Liège" }, "geometry": { "type": "Point", "coordinates": [ 620430.309772894135676, 6558761.193675572052598 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Antwerpen" }, "geometry": { "type": "Point", "coordinates": [ 489773.265331041126046, 6660499.058409684337676 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Namur" }, "geometry": { "type": "Point", "coordinates": [ 541701.70384772727266, 6527465.806748185306787 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Mechelen" }, "geometry": { "type": "Point", "coordinates": [ 498749.757374036533292, 6626272.536789832636714 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Kortrijk" }, "geometry": { "type": "Point", "coordinates": [ 363568.165624738263432, 6590862.190194283612072 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Charleroi" }, "geometry": { "type": "Point", "coordinates": [ 494662.005484565801453, 6517940.887926849536598 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Tournai" }, "geometry": { "type": "Point", "coordinates": [ 377130.163528337376192, 6551831.265780284069479 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Mons" }, "geometry": { "type": "Point", "coordinates": [ 439929.952196403814014, 6525442.352557085454464 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Leuven" }, "geometry": { "type": "Point", "coordinates": [ 523331.572233886981849, 6599953.707219364121556 ] } }
+]
+}

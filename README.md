@@ -1,14 +1,13 @@
 # Performance test
 This project contains implementations of OpenLayers, Maplibre, Deck.gl and Leaflet on data of various sizes 
 and we observe the execution times of each tool. <br/> <br/>
-This README is still in construction
 # Requirements
 - npm (version 6.14.13 used in the performance test)
 # Build & Tutorial
 In order to reproduce this performance test you need to :
 1. ```git clone https://github.com/SoufianBk/perftest.git```
 2. Execute in the working directory : ```npm install```
-3. Run the build script and then the execution script : ```npm run <script-name>``` With ``<script-name>`` described in ``package.json`` <br/>
+3. Run the build script and THEN the execution script : ```npm run <script-name>``` With ``<script-name>`` described in ``package.json`` <br/>
 For example if we want to execute the Openlayers implementation run ``npm run ol-build`` followed by ``npm run ol``
 4. Open a browser with ```http://localhost:1234```
 5. Finally to get the result, check the console of the browser (In Firefox press on ``F12``)
@@ -17,8 +16,12 @@ Here is a list of all the scripts used (can be found in ```package.json```):
 1. ``leaflet`` and ``leaflet-build`` for the Leaflet implementation
 1. ``ol`` and ``ol-build`` for the OpenLayers implementation
 1. ``ml`` and ``ml-build`` for the MapLibre implementation
+1. ``deck`` and ``deck-build`` for the Deck.gl implementation
 
 # Datasets used
+### OpenStreetMap Data extracts
+The ``data`` folder contains OSM data extract that comes from Geofabrik download server : http://download.geofabrik.de/
+### Other Datasets
 Here are the links of the datasets used :
 1. An url containing data concerning all the counties in the USA (200 Mb) :
    https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json 
