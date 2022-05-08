@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "cities",
+"features": [
+{ "type": "Feature", "properties": { "place": "city", "name": "Bruxelles - Brussel" }, "geometry": { "type": "Point", "coordinates": [ 4.351697, 50.846557299276796 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Oostende" }, "geometry": { "type": "Point", "coordinates": [ 2.919496, 51.225856499212234 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Brugge" }, "geometry": { "type": "Point", "coordinates": [ 3.226772, 51.20855259921494 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Gent" }, "geometry": { "type": "Point", "coordinates": [ 3.7250121, 51.053828599240212 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Liège" }, "geometry": { "type": "Point", "coordinates": [ 5.5734203, 50.645138099315027 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Antwerpen" }, "geometry": { "type": "Point", "coordinates": [ 4.3997081, 51.221109699212974 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Namur" }, "geometry": { "type": "Point", "coordinates": [ 4.8661892, 50.466528399350963 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Mechelen" }, "geometry": { "type": "Point", "coordinates": [ 4.4803453, 51.028138099244586 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Kortrijk" }, "geometry": { "type": "Point", "coordinates": [ 3.2659884, 50.827642899280271 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Charleroi" }, "geometry": { "type": "Point", "coordinates": [ 4.4436244, 50.412033199362277 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Tournai" }, "geometry": { "type": "Point", "coordinates": [ 3.3878179, 50.605645799322836 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Mons" }, "geometry": { "type": "Point", "coordinates": [ 3.951958, 50.454956799353354 ] } },
+{ "type": "Feature", "properties": { "place": "city", "name": "Leuven" }, "geometry": { "type": "Point", "coordinates": [ 4.7011675, 50.87920199927084 ] } }
+]
+}

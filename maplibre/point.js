@@ -1,4 +1,4 @@
-var file = 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson';
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/fr_cities.geojson';
 
 var timerStart = Date.now();
 var timerStop;
@@ -29,8 +29,8 @@ const style = {
 const map = new maplibregl.Map({
     container: 'map',
     style: style,
-    center: [1, 15],
-    zoom: 3
+    center: [5, 47],
+    zoom: 5
 });
 
 // Add the navigation control
@@ -39,8 +39,7 @@ map.addControl(new maplibregl.NavigationControl());
 map.on('load', function () {
     map.loadImage(
         'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-4/24/location-point-512.png',
-        function (error, image) {
-            if (error) throw error;
+        function () {
             map.addSource('points', {
                 type: 'geojson',
                 data: file

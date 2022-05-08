@@ -1,9 +1,6 @@
 import 'ol/ol.css';
 
-// https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json 200 MB line
-// https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json 20  MB line
-// https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson 2 MB point
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_cities.geojson';
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/fr_cities.geojson';
 
 ol.proj.useGeographic();
 
@@ -21,7 +18,7 @@ var myMap = new ol.Map({
     ],
     target: 'map',
     view:   new ol.View({
-        center: [4, 51],
+        center: [5, 47],
         zoom: 5
     })
 });
