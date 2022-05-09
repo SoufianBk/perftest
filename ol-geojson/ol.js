@@ -1,6 +1,6 @@
 import 'ol/ol.css';
 
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_cities.json';
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/fr_cities.geojson';
 
 ol.proj.useGeographic();
 
