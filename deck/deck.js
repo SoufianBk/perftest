@@ -6,7 +6,7 @@
 
 const layer = new deck.GeoJsonLayer({
     id: 'geojson-layer',
-    data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson',
+    data: 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/be_cities_converted.geojson',
     filled : false,
     stroked: true,
     getLineColor: [255,0,0],

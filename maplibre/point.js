@@ -1,4 +1,4 @@
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/fr_cities.geojson';
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/be_cities_converted.geojson';
 
 var timerStart = Date.now();
 var timerStop;
