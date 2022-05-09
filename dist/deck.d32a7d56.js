@@ -1,2 +1,0 @@
-const e=new deck.GeoJsonLayer({id:"geojson-layer",data:"https://raw.githubusercontent.com/SoufianBk/perftest/master/data/be_cities_converted.geojson",filled:!1,stroked:!0,getLineColor:[255,0,0],getLineWidth:1,lineWidthUnits:"pixels",getPointRadius:5,pointRadiusUnits:"pixels"});new deck.DeckGL({container:"map",mapStyle:deck.carto.BASEMAP.VOYAGER,initialViewState:{latitude:0,longitude:0,zoom:1},controller:!0,layers:[e]});
-//# sourceMappingURL=deck.d32a7d56.js.map

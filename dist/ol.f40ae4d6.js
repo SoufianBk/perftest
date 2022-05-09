@@ -1,2 +1,0 @@
-ol.proj.useGeographic();var e,o,t=Date.now(),n=new ol.Map({layers:[new ol.layer.Tile({source:new ol.source.OSM})],target:"map",view:new ol.View({center:[5,47],zoom:5})}),a=new ol.source.Vector({url:"https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_cities.json",format:new ol.format.GeoJSON}),r=new ol.layer.Vector({source:a});n.addLayer(r),r.on("change",(function(n){e=Date.now(),o=e-t,console.info("Start at "+t),console.info("Stopped at "+e),console.info("Loading time = "+o)}));
-//# sourceMappingURL=ol.f40ae4d6.js.map
