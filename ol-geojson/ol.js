@@ -1,6 +1,6 @@
 import 'ol/ol.css';
 
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/fr_cities.geojson';
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_hamlets.json';
 
 ol.proj.useGeographic();
 
@@ -34,7 +34,7 @@ var bigJSON  = new ol.layer.Vector ({
 
 myMap.addLayer(bigJSON);
 
-bigJSON.on('change', function(e) {
+myMap.on('rendercomplete', function(e) {
     timerStop = Date.now();
     timerDelta = timerStop - timerStart;
 

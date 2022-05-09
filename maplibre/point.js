@@ -1,8 +1,8 @@
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/be_cities_converted.geojson';
-
 var timerStart = Date.now();
 var timerStop;
 var timerDelta;
+
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_hamlets.json';
 
 // Define the map syle (OpenStreetMap raster tiles)
 const style = {
@@ -60,11 +60,14 @@ map.on('load', function () {
             });
         }
     );
+
 });
 
-timerStop = Date.now();
-timerDelta = timerStop - timerStart;
+map.on('idle', function () {
+    timerStop = Date.now();
+    timerDelta = timerStop - timerStart;
 
-console.info("Start at " + timerStart);
-console.info("Stopped at " + timerStop );
-console.info("Loading time = " + timerDelta );
+    console.info("Start at " + timerStart);
+    console.info("Stopped at " + timerStop );
+    console.info("Loading time = " + timerDelta );
+});
