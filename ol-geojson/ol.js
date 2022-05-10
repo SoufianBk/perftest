@@ -1,6 +1,11 @@
 import 'ol/ol.css';
 
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_hamlets.json';
+var cities = "_cities.json"
+var towns = "_towns.json"
+var villages = "_villages.json"
+var hamlets = "_hamlets.json"
+
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/' + towns ;
 
 ol.proj.useGeographic();
 

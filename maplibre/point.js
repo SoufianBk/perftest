@@ -2,7 +2,12 @@ var timerStart = Date.now();
 var timerStop;
 var timerDelta;
 
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_hamlets.json';
+var cities = "_cities.json"
+var towns = "_towns.json"
+var villages = "_villages.json"
+var hamlets = "_hamlets.json"
+
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/' + cities ;
 
 // Define the map syle (OpenStreetMap raster tiles)
 const style = {
@@ -32,9 +37,6 @@ const map = new maplibregl.Map({
     center: [5, 47],
     zoom: 5
 });
-
-// Add the navigation control
-map.addControl(new maplibregl.NavigationControl());
 
 map.on('load', function () {
     map.loadImage(

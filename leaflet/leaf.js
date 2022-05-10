@@ -1,7 +1,9 @@
-// https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json 200 MB line
-// https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json 20  MB line
-// https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson 2 MB point
-var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/_villages.json';
+var cities = "_cities.json"
+var towns = "_towns.json"
+var villages = "_villages.json"
+var hamlets = "_hamlets.json"
+
+var file = 'https://raw.githubusercontent.com/SoufianBk/perftest/master/data/' + towns ;
 
 var timerStart = Date.now();
 var timerStop;

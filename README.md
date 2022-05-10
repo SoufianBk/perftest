@@ -21,19 +21,13 @@ Here is a list of all the scripts used (can be found in ```package.json```):
 # Datasets used
 ### OpenStreetMap Data extracts
 The ``data`` folder contains OSM data extract that comes from Geofabrik download server : http://download.geofabrik.de/
-### Other Datasets
-Here are the links of the datasets used :
-1. An url containing data concerning all the counties in the USA (200 Mb) :
-   https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/county.geo.json 
-2. An url containing data concerning all the states in the USA (20 Mb) :
-   https://raw.githubusercontent.com/jgoodall/us-maps/master/geojson/state.geo.json 
-3. An url containing data concerning all the populated places in the world (2 Mb) :
-   https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_populated_places.geojson
-   
-In order to change the data to display, change the ``var file = ...`` which is located at the start of each javascript file for each implementation
+
+The dataset has been divided into ```cities```, ```towns```, ```villages```, ```hamlets```
+
+In order to change the data to display, change the variable at the end of ``var file = ...`` which is located at the start of each javascript file for each implementation
 # Example
 Running ```npm run ol``` displays the following : <br/> <br/>
-![img.png](img.png) <br/> <br/>
+![img.png](OL-Cities.png) <br/> <br/>
 Then the console displays (with ``F12``): <br/> <br/>
 ![img_1.png](img_1.png)
 # Troubleshooting
